@@ -7,12 +7,23 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install",
+    "lint": "eslint --fix --ext .ts,.tsx ./src",
+    "format": "prettier --check ./src"
   },
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
     ]
   },
   "dependencies": {
@@ -28,10 +39,23 @@
     "react-native-web": "~0.18.10"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
     "@babel/core": "^7.20.0",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.37",
-    "@types/react-native": "^0.71.6"
+    "@types/react-native": "^0.71.6",
+    "husky": "^8.0.0"
   },
   "private": true
 }

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@test/*": ["test/*"]
+    },
+    "composite": true,
+    "jsx": "react-native"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+    "setupFilesAfterEnv": ["<rootDir>/__mocks__/globalMock.js"]
+  },
+  "extends": "expo/tsconfig.base"
+}

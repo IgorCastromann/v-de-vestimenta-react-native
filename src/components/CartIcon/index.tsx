@@ -1,4 +1,3 @@
-import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { type NavigationRoutes } from "@src/routes/types";
 import TotalCartItems from "@src/components/TotalCartItems";

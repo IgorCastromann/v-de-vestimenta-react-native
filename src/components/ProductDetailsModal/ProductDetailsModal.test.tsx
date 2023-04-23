@@ -2,7 +2,7 @@ import { RootStackScreenComponent } from "@src/routes/types";
 import productStore from "@src/store/productStore";
 import { buildProductMock } from "@test/mocks/product";
 import { renderWithProvider } from "@test/render";
-import ProductDetailsModal from ".";
+import ProductDetailsModal from "./index";
 import { ProductDetailsModalController } from "./controller";
 
 const mockNavigation = {} as RootStackScreenComponent<"Home">["navigation"];

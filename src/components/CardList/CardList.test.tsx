@@ -1,5 +1,5 @@
 import { buildProductsArrayMock } from "@test/mocks/product";
-import CardList from ".";
+import CardList from "./index";
 import { renderWithProvider } from "@test/render";
 
 describe("<CardList />", () => {

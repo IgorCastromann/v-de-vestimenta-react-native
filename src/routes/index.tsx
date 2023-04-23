@@ -48,7 +48,7 @@ export default function Stacks() {
                   placeholder="Buscar por"
                   clearButtonMode="always"
                   autoFocus
-                  width={64}
+                  width={"56"}
                   onChangeText={(val) => productStore.setSearch(val)}
                 />
               ) : null}

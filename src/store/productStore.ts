@@ -69,6 +69,12 @@ export class ProductStore {
     this.search = str;
   };
 
+  public getQuantityByProductId = (id: string) => {
+    const product = this.cartList.find((item) => item.id === id);
+    if (product) return product.cartQuantity;
+    return 0;
+  };
+
   public get filteredProducts() {
     const isSearching = this.search.length > 0;
 
